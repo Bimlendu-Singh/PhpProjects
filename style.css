@@ -1,6 +1,18 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 .container {
-  max-width: 80%;
+  max-width: 100%;
   background-color: antiquewhite;
   padding: 34px;
   margin: auto;
+}
+
+.container h1,
+h3,
+p {
+  text-align: center;
 }
