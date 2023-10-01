@@ -1,7 +1,9 @@
 <?php
-   $server = "localhost";
-   $username = "root";
-   $password = "";
+  $insert = false;
+ if(isset($_POST['name'])){
+    $server = "localhost";
+    $username = "root";
+    $password = "";
 
    $con = mysqli_connect($server, $username, $password);
 
@@ -16,11 +18,23 @@
     $gender = $_POST['gender'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $about = $_POST['about'];
+    $desc = $_POST['desc'];
 
-    $sql = "INSERT INTO `sdpr` ( `name`, `age`, `gender`, `email`, `phone`, `about`,
-  `dt`) VALUES ( 'hello', '22', 'Male', 'bimlendukumarsingh.bks4@gmail.com',
-  '8709349979', 'yes no', current_timestamp());";
+    $sql = "INSERT INTO `sdpr`.'sdpr' ( `name`, `age`, `gender`, `email`, `phone`, `desc`,
+  `dt`) VALUES ( '$name', '$age', '$gender', '$email',
+  '$phone', '$desc', current_timestamp());";
+
+  // echo $sql;
+
+  if($con->query(sql)==true)
+  {
+    $insert = true;
+  }
+  else{
+    echo "ERROR: $sql <br> $con->error";
+  }
    
+   $con->close();
+ }
    
 ?>
