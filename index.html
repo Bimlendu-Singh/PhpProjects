@@ -6,14 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sadhanapada</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Foldit:wght@300&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Foldit:wght@300&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <img class="bg" src="bg7.avif" alt="Sadhanapada Image" />
     <div class="container">
-      <h1>Sadhanapada</h1>
-      <h3>Prepare Yourself For Life</h3>
-      <br />
+      <h1>Sadhanapada Registration</h1>
       <br />
       <p>Enter Your deatils to confirm your Participation</p>
+      <br />
 
       <form action="index.php" method="post">
         <input
@@ -35,6 +48,20 @@
           id="email"
           placeholder="Enter Your Email"
         />
+        <input
+          type="phone"
+          name="phone"
+          id="phone"
+          placeholder="Enter Your Phone"
+        />
+        <textarea
+          name="desc"
+          id="desc"
+          cols="30"
+          rows="10"
+          placeholder="Enter About Yourself"
+        ></textarea>
+        <button class="btn">Submit</button>
       </form>
     </div>
     <script>
